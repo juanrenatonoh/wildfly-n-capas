@@ -12,4 +12,28 @@
   		jboss-project-wildfly-infraestructura-datos-repositorio
   	</module>
   </modules>
+  
+  <dependencyManagement>
+  
+  	<dependencies>
+  	
+  		<!-- https://mvnrepository.com/artifact/org.wildfly.bom/jboss-javaee-7.0-with-hibernate -->
+		<dependency>
+		    <groupId>org.wildfly.bom</groupId>
+		    <artifactId>jboss-javaee-7.0-with-hibernate</artifactId>
+		    <version>${jboss.with.hibernate}</version>
+		    <type>pom</type>
+		</dependency>
+		
+  	
+  	</dependencies>
+  
+  </dependencyManagement>
+  
+  
+  
+  
+
+  
+  
 </project>

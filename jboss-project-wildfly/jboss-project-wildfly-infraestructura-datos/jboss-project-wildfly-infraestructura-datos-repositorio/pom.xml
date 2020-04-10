@@ -8,6 +8,26 @@
   <artifactId>jboss-project-wildfly-infraestructura-datos-repositorio</artifactId>
   
   
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+			 <groupId>javax.enterprise</groupId>
+			 <artifactId>cdi-api</artifactId>
+			 <type>jar</type>
+		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+  <dependencies>
+  			
+  		<dependency>
+			 <groupId>org.wildfly.bom</groupId>
+			  <artifactId>jboss-javaee-7.0-with-hibernate</artifactId>
+			  <type>pom</type>
+		</dependency>
+		
+			
+ </dependencies>
   
   
 </project>

@@ -16,13 +16,18 @@
   	<module>jboss-project-wildfly-presentacion</module>
   </modules>
   
+  <properties>
+            <jboss.javaee.version>1.0.0.Final</jboss.javaee.version>
+            <jboss.with.hibernate>8.2.2.Final</jboss.with.hibernate>
+  </properties>
+  
   
   <dependencyManagement>
   		<dependencies>
 	  		<dependency>
 			       <groupId>org.jboss.spec</groupId>
 			        <artifactId>jboss-javaee-7.0</artifactId>
-			        <version>1.0.0.Final</version>
+			        <version>${jboss.javaee.version}</version>
 			        <type>pom</type>
 			        <scope>provided</scope>
 			</dependency>
