@@ -7,4 +7,193 @@
   	<artifactId>jboss-project-wildfly</artifactId>
   	<version>1</version>
   </parent>
+  
+  <repositories>
+		<!-- Primeface repository -->
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<!-- JSF Dependencies -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+
+		<!-- Primefaces dependencies -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.0</version>
+		</dependency>
+
+		<!-- Primefaces temas -->
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>smoothness</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+		<!-- CDI -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<!-- JODA -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<!-- SERVLETS -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<!-- UTILERIA LETRAS -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+
+		<!-- REPORTES -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>5.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.barbecue</groupId>
+			<artifactId>barbecue</artifactId>
+			<version>1.5-beta1</version>
+		</dependency>
+
+		<!-- IMPORTAR Y EXPORTAR ARCHIVOS -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+		</dependency>
+
+		<!-- Dependencias para eventos FileUpload -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!-- REPORTES -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>5.0.1</version>
+		</dependency>
+		<!-- Documentos de Office (Word ".doc" y Excel ".xls") -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<!-- Documentos de Office Open XML (Word ".docx" y Excel ".xlsx") -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.11</version>
+		</dependency>
+		<!-- Maneja los XML que contienen los archivos de Office -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.11</version>
+		</dependency>
+
+		<!-- Esta biblioteca se encarga de el RSS -->
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<!-- TEST -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+
+		<!-- API -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.wildfly</groupId>
+				<artifactId>wildfly-dist</artifactId>
+				<version>9.0.2.Final</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.9</version>
+			</plugin>
+
+
+		</plugins>
+	</build>
+  
 </project>
